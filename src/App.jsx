@@ -8,7 +8,7 @@ const App = () => {
   return (
     <body className="bg-black min-h-screen">
       <Navbar/>
-      {/* <Home/> */}
+      <Home/>
       <Trends/>
     </body>
   )
