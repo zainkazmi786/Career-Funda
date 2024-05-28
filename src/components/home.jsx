@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from "./navbar"
+import { Link } from 'react-router-dom';
 import Box from "./box"
 import mag from '../assets/mag.svg';
 import g from '../assets/g.svg';
@@ -10,10 +10,10 @@ const home = () => {
       <div className="w-11/12 h-1/2 bg-blue-600 rounded-b-3xl border-blue-600 flex">
         <div className='h-full w-1/2'>
 
-           <div className="mainheading text-white text-7xl font-mono font-extrabold h-2/3 w-full flex items-center p-10">Career Trend Analysis</div>
-           <div className='h-1/3 w-full flex justify-start m-10 items-center gap-10'>
-              <button className='w-48 h-12 rounded-full bg-white '> Start Now</button>
-              <button className='w-48 h-12 rounded-full bg-white'> Try Demo </button>
+           <div className="mainheading text-white text-9xl font-mono font-extrabold h-2/3 w-full flex items-center p-10">CAREER FUNDA</div>
+           <div className='h-1/3 w-full flex justify-start m-10 items-center gap-10 text-white text-xl'>
+              <Link to="/trends"><button className='w-48 h-12 rounded-full bg-slate-800 '> View Trends</button></Link>
+              <button className='w-48 h-12 rounded-full bg-slate-800'> Try Demo </button>
            </div>
         </div>
 

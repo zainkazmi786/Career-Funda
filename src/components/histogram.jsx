@@ -7,8 +7,7 @@ ChartJS.register(BarElement, LinearScale, CategoryScale, ArcElement, Tooltip, Le
 function Histogram({ xAxisData, yAxisData }) {
   const longestLabelLength = Math.max(...xAxisData.map(label => label.length));
   const maxBarThickness = 100; // Maximum bar thickness
-  const barThickness = Math.min(maxBarThickness, 40 + longestLabelLength * 5); // Adjust based on label length
-
+  
   const data = {
     labels: xAxisData,
     datasets: [
@@ -18,30 +17,17 @@ function Histogram({ xAxisData, yAxisData }) {
         backgroundColor: "rgb(75, 192, 192)",
         borderColor: "rgb(75, 192, 192)",
         borderWidth: 1,
-        barThickness: barThickness,
-        categoryPercentage: 0.01 // Controls the gap between the bars (1.0 = no gap)
+        barThickness: 40,
+        categoryPercentage: 0.1, // Adjust to control the gap between the bars
+        barPercentage: 0.1, // Adjust to control the width of the bars
       }
     ]
   };
 
   const options = {
+    indexAxis: 'y', // This makes the bars horizontal
     scales: {
       x: {
-        grid: {
-          color: "rgba(255, 255, 255, 0)"
-        },
-        ticks: {
-          color: 'rgba(30, 144, 200, 1)', // Attractive shade of blue
-          font: {
-            size: 14, // Increase font size
-          },
-         
-          maxRotation: 0, // Prevent tilting
-          autoSkip: false, 
-          autoSkipPadding: 20, // Padding between skipped labels
-        }
-      },
-      y: {
         grid: {
           color: "rgba(255, 255, 255, 0)"
         },
@@ -49,6 +35,20 @@ function Histogram({ xAxisData, yAxisData }) {
           display: true,
           text: 'Number of Jobs',
           color: 'white'
+        }
+      },
+      y: {
+        grid: {
+          color: "rgba(255, 255, 255, 0)"
+        },
+        ticks: {
+          color: '#68aeff', // Attractive shade of blue
+          font: {
+            size: 20, // Increase font size
+          },
+          maxRotation: 0, // Prevent tilting
+          minRotation: 0, // Prevent tilting
+          autoSkip: false, // Do not skip labels automatically
         }
       }
     }
