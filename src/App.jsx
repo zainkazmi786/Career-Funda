@@ -6,7 +6,7 @@ import React from 'react'
 
 const App = () => {
   return (
-    <body className="bg-black min-h-screen">
+    <body className="bg-black min-h-screen w-screen">
       <Navbar/>
       <Home/>
       <Trends/>
