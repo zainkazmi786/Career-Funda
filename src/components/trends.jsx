@@ -6,7 +6,7 @@ import Histogram from './histogram';
 const Trends = () => {
     return (
         <div className='w-full flex flex-col items-center gap-10'>
-            <div className='text-7xl text-blue-300 p-10'>TRENDS TODAY in PAKISTAN</div>
+            <div className='text-7xl text-blue-300 p-10'>TRENDS TODAY IN PAKISTAN</div>
 
             <div className='flex justify-center w-11/12'>
 
