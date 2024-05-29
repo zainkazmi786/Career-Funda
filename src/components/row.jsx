@@ -1,4 +1,5 @@
 import React from 'react'
+
 import g from '../assets/g.svg';
 const row = ({srno,feild,no_ofjobs,avgsalary = "N/A"}) => {
   return (

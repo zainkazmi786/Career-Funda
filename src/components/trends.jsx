@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Papa from 'papaparse';
 import Row from './row';
+import { Link } from 'react-router-dom';
 import Histogram from './histogram';
 
 const Trends = () => {
@@ -54,12 +55,14 @@ const Trends = () => {
 
                     <div className='flex flex-col w-full gap-2'>
                         {xAxisData.map((field, index) => (
+                            <Link to="/field">
                             <Row
                                 key={index}
                                 srno={index + 1}
                                 feild={field}
                                 no_ofjobs={yAxisData[index]}
-                            />
+                                />
+                                </Link>
                         ))}
                     </div>
 
