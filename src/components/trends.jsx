@@ -6,12 +6,9 @@ import Histogram from './histogram';
 const Trends = () => {
     return (
         <div className='w-full flex flex-col items-center gap-10'>
-            <div className='text-7xl text-blue-300 p-10'>TRENDS TODAY in PAKISTAN</div>
+            <div className='text-7xl text-blue-300 p-10'>TRENDS TODAY IN PAKISTAN</div>
 
-            <div className='flex justify-center w-11/12'>
-
-                <Histogram xAxisData={["SOFTWARE ENGINEER", "PROGRAMMER", "DATA ANALYST", "WEB DEVELOPER", "AI DEVELOPER", "WORDPRESS DEVELOPER", "GRAPHIC DESIGNER", "DATA ANALYST"]} yAxisData={[1508, 1510, 595, 373, 173, 141, 127, 72]} />
-            </div>
+            
 
             <div className='w-11/12 rounded-3xl flex flex-col items-center h-auto gap-2 pb-10 overflow-auto'>
                 <div className='thead w-full h-14 bg-slate-800 rounded-t-3xl flex justify-center sticky top-0'>
@@ -39,6 +36,7 @@ const Trends = () => {
 
                 </div>
             </div>
+            
         </div>
     );
 }
