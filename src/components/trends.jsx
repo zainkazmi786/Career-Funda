@@ -1,17 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Papa from 'papaparse';
 import Row from './row';
-
 import Histogram from './histogram';
 
 const Trends = () => {
+    const [xAxisData, setXAxisData] = useState([]);
+    const [yAxisData, setYAxisData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get('./BackEnd/data.csv');
+                Papa.parse(response.data, {
+                    header: false, // since there's no header row
+                    complete: (results) => {
+                        const xData = results.data.map((row) => row[0]); // first column
+                        const yData = results.data.map((row) => parseInt(row[1], 10)); // second column
+                        setXAxisData(xData);
+                        setYAxisData(yData);
+                    },
+                });
+            } catch (error) {
+                console.error('Error fetching the CSV file:', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
     return (
         <div className='w-full flex flex-col items-center gap-10'>
             <div className='text-7xl text-blue-300 p-10'>TRENDS TODAY in PAKISTAN</div>
 
             <div className='flex justify-center w-11/12'>
-
-                <Histogram xAxisData={["SOFTWARE ENGINEER", "PROGRAMMER", "DATA ANALYST", "WEB DEVELOPER", "AI DEVELOPER", "WORDPRESS DEVELOPER", "GRAPHIC DESIGNER", "DATA ANALYST"]} yAxisData={[1508, 1510, 595, 373, 173, 141, 127, 72]} />
+                <Histogram xAxisData={xAxisData} yAxisData={yAxisData} />
             </div>
+
 
             <div className='w-11/12 rounded-3xl flex flex-col items-center h-auto gap-2 pb-10 overflow-auto'>
                 <div className='thead w-full h-14 bg-slate-800 rounded-t-3xl flex justify-center sticky top-0'>
@@ -27,14 +52,16 @@ const Trends = () => {
                 </div>
                 <div className='flex flex-col w-full gap-2'>
 
-                    <Row srno={"1"} feild="PROGRAMMER" no_ofjobs="1510" />
-                    <Row srno={"2"} feild="SOFTWARE ENGINEER" no_ofjobs="1508" />
-                    <Row srno={"3"} feild="DATA SCIENTIST" no_ofjobs="595" />
-                    <Row srno={"4"} feild="AI DEVELOPER" no_ofjobs="173" />
-                    <Row srno={"5"} feild="WORDPRESS DEVELOPER" no_ofjobs="141" />
-                    <Row srno={"6"} feild="GRAPHIC DESIGNER" no_ofjobs="127" />
-                    <Row srno={"7"} feild="DATA ANALYST" no_ofjobs="72" />
-
+                    <div className='flex flex-col w-full gap-2'>
+                        {xAxisData.map((field, index) => (
+                            <Row
+                                key={index}
+                                srno={index + 1}
+                                feild={field}
+                                no_ofjobs={yAxisData[index]}
+                            />
+                        ))}
+                    </div>
 
 
                 </div>
