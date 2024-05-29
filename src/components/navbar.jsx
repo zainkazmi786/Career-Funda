@@ -1,13 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Navcomp from './navcomp'
+import logo from '../assets/CAREER FUNDA.png'
 
 const navbar = () => {
     return (
 
         <div className="main  w-screen h-20 flex items-start justify-evenly sticky top-0 bg-gradient-to-t from-30% from-slate-900 to-slate-800 z-10">
-            <div className="logo w-1/3">
-                <img src="" alt="" />
+            <div className="logo w-1/3 h-full flex items-center">
+                <img className='h-full filter' src={logo} alt="" />
                 <h1 className="text-3xl text-white h-full">Career Funda</h1>
             </div>
             <ul className="navcontent w-1/3 h-3/4 flex justify-between items-start list-none">

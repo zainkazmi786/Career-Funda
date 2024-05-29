@@ -55,7 +55,7 @@ function Histogram({ xAxisData, yAxisData }) {
   };
 
   return (
-    <div className="npm border-2" style={{ width: "90%", height: "70%" }}>
+    <div className="npm rounded-xl shadow" style={{ width: "90%", height: "70%" }}>
       <Bar data={data} options={options} />
     </div>
   );
