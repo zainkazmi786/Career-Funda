@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FieldComponent = ({ field = "Software Engineer"}) => {
+const FieldComponent = ({ field }) => {
   return (
     <div className="bg-black rounded-lg shadow-md p-4 mb-4 flex flex-col gap-10 w-full items-center text-justify">
       <div className="text-7xl font-bold text-blue-600">{field}</div>

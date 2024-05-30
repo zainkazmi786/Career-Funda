@@ -68,7 +68,7 @@ class LinkedInScraper(Scraper):
             print(f"Error writing to CSV: {e}")
 
 # Example usage
-chromedriver_path = r"C:\Users\Faraz Laptop\Documents\chromedriver-win64\chromedriver.exe"  # Update with your actual chromedriver path
+chromedriver_path = r"C:\Users\HP\Documents\chromedriver-win64\chromedriver.exe"  # Update with your actual chromedriver path
 scraper = LinkedInScraper(chromedriver_path)
 job_titles = ["SOFTWARE ENGINEER", "PROGRAMMER", "DATA ANALYST", "WEB DEVELOPER", "AI DEVELOPER", "WORDPRESS DEVELOPER", "GRAPHIC DESIGNER", "DATA SCIENTIST"]
 

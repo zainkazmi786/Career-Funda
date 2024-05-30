@@ -16,7 +16,7 @@ const navbar = () => {
                 <li className='h-full'><Link to="/trends"><Navcomp compname="Trends" /></Link></li>
                 <li className='h-full'><Link to="/recommendor"><Navcomp compname="Recommendor"/></Link></li>
                 <li className='h-full'><Link to="/guidance"><Navcomp compname="Guidance" /></Link></li>
-                <li className='h-full'><Link to="/about us"><Navcomp compname="About Us" /></Link></li>
+                <li className='h-full'><Link to="/about"><Navcomp compname="About Us" /></Link></li>
 
             </ul>
 

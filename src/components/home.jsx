@@ -22,7 +22,7 @@ const home = () => {
       <div className="flex w-11/12 justify-between">
         <Box heading="Data insights " subheading="5TB+ Data" img={mag} />
         <Box heading="Engaged Users" subheading="6M+ Users" img={mag} />
-        <Box heading="In Progress" subheading="6TB+ Data" img={mag} />
+        <Link to="AI"><Box heading="AI Impact" subheading="Be Informed" img={mag} /></Link>
         <Box heading="Take Demo" subheading="Get Started for Free" img={mag} />
       </div>
     </div>
