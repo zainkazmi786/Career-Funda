@@ -8,7 +8,7 @@ function Graph({ xAxisData, yAxisData }) {
     labels: xAxisData,
     datasets: [
       {
-        label: "CHATGPT users",
+        label: "CHATGPT users in Billions",
         data: yAxisData,
         fill: false,
         borderColor: "rgb(75, 192, 192)",
@@ -23,12 +23,24 @@ function Graph({ xAxisData, yAxisData }) {
     scales: {
       x: {
         grid: {
-          color: "rgba(255, 255, 255, 0.5)" // Set x-axis color to white with opacity
+          color: "rgba(255, 255, 255, 0.5)" // Set x-axis grid color to white with opacity
+        },
+        ticks: {
+          color: "white", // Set x-axis ticks color to white
+          font: {
+            size: 20 // Increase font size for x-axis ticks
+          }
         }
       },
       y: {
         grid: {
-          color: "rgba(255, 255, 255, 0.5)" // Set y-axis color to white with opacity
+          color: "rgba(255, 255, 255, 0.5)" // Set y-axis grid color to white with opacity
+        },
+        ticks: {
+          color: "white", // Set y-axis ticks color to white
+          font: {
+            size: 20 // Increase font size for y-axis ticks
+          }
         },
         title: {
           display: true,
@@ -38,10 +50,9 @@ function Graph({ xAxisData, yAxisData }) {
       }
     }
   };
-  
 
   return (
-    <div className="npm" style={{ width: "90%", height: "70%"}}>
+    <div className="npm" style={{ width: "90%", height: "70%" }}>
       <Line data={data} options={options} />
     </div>
   );

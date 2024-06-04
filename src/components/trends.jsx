@@ -83,20 +83,13 @@ const Trends = () => {
             <div className='w-11/12 grid grid-cols-3 gap-20'>
                 <Article title="AI" description="AI and ML are at the forefront of this revolution. The integration of these technologies in various sectors has led to more efficient processes, enhanced customer experiences, and the creation of new job roles.
                 One of the most significant impacts of AI and ML is in automation." />
-                <Article title="DATA SCIENCE" description="AI and ML are at the forefront of this revolution. The integration of these technologies in various sectors has led to more efficient processes, enhanced customer experiences, and the creation of new job roles.
-                One of the most significant impacts of AI and ML is in automation." />
-                <Article title="CYBER SECURITY" description="AI and ML are at the forefront of this revolution. The integration of these technologies in various sectors has led to more efficient processes, enhanced customer experiences, and the creation of new job roles.
-                One of the most significant impacts of AI and ML is in automation." />
-                <Article title="WEB DEVELOPMENT" description="AI and ML are at the forefront of this revolution. The integration of these technologies in various sectors has led to more efficient processes, enhanced customer experiences, and the creation of new job roles.
-                One of the most significant impacts of AI and ML is in automation." />
-                <Article title="SOFTWARE ENGINEERING" description="AI and ML are at the forefront of this revolution. The integration of these technologies in various sectors has led to more efficient processes, enhanced customer experiences, and the creation of new job roles.
-                One of the most significant impacts of AI and ML is in automation." />
-                <Article title="DATA ANALYST" description="AI and ML are at the forefront of this revolution. The integration of these technologies in various sectors has led to more efficient processes, enhanced customer experiences, and the creation of new job roles.
-                One of the most significant impacts of AI and ML is in automation." />
-                <Article title="WORDPRESS DEVELOPER" description="AI and ML are at the forefront of this revolution. The integration of these technologies in various sectors has led to more efficient processes, enhanced customer experiences, and the creation of new job roles.
-                One of the most significant impacts of AI and ML is in automation." />
-                <Article title="GRAPHIC DESIGNER" description="AI and ML are at the forefront of this revolution. The integration of these technologies in various sectors has led to more efficient processes, enhanced customer experiences, and the creation of new job roles.
-                One of the most significant impacts of AI and ML is in automation." />
+                <Article title="DATA SCIENCE" description="Data science is transforming industries by turning vast amounts of data into actionable insights. It combines statistical analysis, programming, and domain expertise to inform smarter decision-making and optimize processes. This field drives innovation and uncovers new opportunities for growth and efficiency." />
+                <Article title="CYBER SECURITY" description="Cyber security is crucial for protecting digital assets from threats and vulnerabilities. It involves safeguarding networks, systems, and data through advanced technologies and practices. This field is essential for ensuring the integrity, confidentiality, and availability of information in an increasingly digital world." />
+                <Article title="WEB DEVELOPMENT" description="Web development focuses on creating and maintaining websites and web applications. It involves front-end design, back-end programming, and database management to deliver seamless online experiences. This field is vital for building the digital presence of businesses and enhancing user interaction on the web." />
+                <Article title="SOFTWARE ENGINEERING" description="Software engineering focuses on designing, developing, and maintaining reliable software systems. It combines principles of computer science, engineering, and project management to create efficient, scalable solutions. This field is essential for building and optimizing the software that powers modern technology." />
+                <Article title="DATA ANALYST" description="Data analysts interpret complex datasets to provide valuable insights and support decision-making. They utilize statistical tools and software to identify trends, patterns, and relationships within data. This role is vital for optimizing business strategies and improving operational efficiency." />
+                <Article title="WORDPRESS DEVELOPER" description="WordPress development focuses on creating and customizing websites using the WordPress platform. It involves designing themes, developing plugins, and optimizing site functionality. This field empowers businesses and individuals to build dynamic, user-friendly websites with ease." />
+                <Article title="GRAPHIC DESIGNER" description="Graphic design is the art of creating visual content to communicate messages. It combines typography, imagery, and color to produce compelling designs for various media. This field plays a key role in branding, marketing, and digital communication." />
 
 
 
